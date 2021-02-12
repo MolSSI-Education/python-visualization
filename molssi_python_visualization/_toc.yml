@@ -8,8 +8,6 @@
   sections:
     - file: chapters/line_plots
     - file: chapters/subplots
-- file: chapters/intro_contour
-  sections:
     - file: chapters/contour
     - file: chapters/contour_customization
 - file: chapters/interactive
