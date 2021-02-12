@@ -26,9 +26,13 @@ jobs:
       run: |
         pip install -r requirements.txt
 
-    # Build the book
+    # Build the book - absolutely ridiculous attempted work around to get data files where i need them.
     - name: Build the book
       run: |
+        mkdir molssi_python_visualization/_build
+        mkdir molssi_python_visualization/_build/jupyter_execute
+        mkdir molssi_python_visualization/_build/jupyter_execute/chapters
+        cp molssi_python_visualization/chapters/*.csv molssi_python_visualization/_build/jupyter_execute/chapters
         jupyter-book build molssi_python_visualization --all
 
     # Deploy the book's HTML to gh-pages branch
