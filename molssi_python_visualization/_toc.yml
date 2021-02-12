@@ -6,7 +6,7 @@
 - file: chapters/introduction
 - file: chapters/intro_matplotlib
   sections:
-    - file: chapters/line_plots
+    - file: chapters/matplotlib_line_plots
     - file: chapters/subplots
     - file: chapters/contour
     - file: chapters/contour_customization
