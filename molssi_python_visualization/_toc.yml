@@ -1,0 +1,15 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+- file: intro.md
+- file: chapters/setup
+- file: chapters/introduction
+- file: chapters/intro_matplotlib
+  sections:
+    - file: chapters/line_plots
+    - file: chapters/subplots
+- file: chapters/intro_contour
+  sections:
+    - file: chapters/contour
+    - file: chapters/contour_customization
+- file: chapters/interactive
