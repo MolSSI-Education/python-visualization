@@ -10,5 +10,6 @@
     - file: chapters/subplots
     - file: chapters/font_size
     - file: chapters/contour
+    - file: chapters/3d_plots
     - file: chapters/project
 - file: chapters/interactive
