@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Creating Plots using Matplotlib &#8212; Scientific Visualization Using Python</title>
+    <title>Interactive Plots using Plotly &#8212; Scientific Visualization Using Python</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -55,8 +55,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Line and Scatter Plots" href="matplotlib_line_plots.html" />
-    <link rel="prev" title="Preparing to Plot" href="introduction.html" />
+    <link rel="next" title="Plots with Plotly Express" href="plotly-express.html" />
+    <link rel="prev" title="Putting it together" href="project.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -104,8 +104,8 @@
    Preparing to Plot
   </a>
  </li>
- <li class="toctree-l1 current active collapsible-parent">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="intro_matplotlib.html">
    Creating Plots using Matplotlib
   </a>
   <ul class="collapse-ul">
@@ -143,8 +143,8 @@
   <i class="fas fa-chevron-down">
   </i>
  </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="plotly.html">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="current reference internal" href="#">
    Interactive Plots using Plotly
   </a>
   <ul class="collapse-ul">
@@ -197,7 +197,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/chapters/intro_matplotlib.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/chapters/plotly.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -217,7 +217,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/MolSSI-Education/python-visualization/issues/new?title=Issue%20on%20page%20%2Fchapters/intro_matplotlib.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/MolSSI-Education/python-visualization/issues/new?title=Issue%20on%20page%20%2Fchapters/plotly.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -245,10 +245,14 @@
         
               <div>
                 
-  <div class="section" id="creating-plots-using-matplotlib">
-<h1>Creating Plots using Matplotlib<a class="headerlink" href="#creating-plots-using-matplotlib" title="Permalink to this headline">¶</a></h1>
-<p>In this section, we will be creating plots using the python library <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.  Matplotlib is perhaps the most widely used python plotting library.</p>
-<p>You can see the documentation for the Matplotlib library <a class="reference external" href="https://matplotlib.org/stable/index.html">here</a> or read more about its history <a class="reference external" href="https://matplotlib.org/stable/users/history.html">here</a>.</p>
+  <div class="section" id="interactive-plots-using-plotly">
+<h1>Interactive Plots using Plotly<a class="headerlink" href="#interactive-plots-using-plotly" title="Permalink to this headline">¶</a></h1>
+<p>You have seen in the previous lessons that we can make <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> plots somewhat interactive in the jupyter notebook by using the <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">notebook</span></code> magic command. Matplotlib has other, more complex ways to make figures interactive that you can read about <a class="reference external" href="https://matplotlib.org/stable/users/interactive.html">here</a>.</p>
+<p>However, there are other python libraries which are designed specifically to create interactive figures. This section covers creating interactive plots using the plotting library <a class="reference external" href="https://plotly.com/python/">plotly</a>. Plotly has a python API, but is also available in several other languages. There are two ways you can use plotly - through <code class="docutils literal notranslate"><span class="pre">plotly</span> <span class="pre">express</span></code> or through <code class="docutils literal notranslate"><span class="pre">plotly</span> <span class="pre">graph</span> <span class="pre">objects</span></code>. <code class="docutils literal notranslate"><span class="pre">Plotly</span> <span class="pre">Express</span></code> is the newer, more-user-friendly interface which has been made to simply commonly made plots. The second option - using <code class="docutils literal notranslate"><span class="pre">plotly</span> <span class="pre">graph</span> <span class="pre">objects</span></code> allows for much more control over your figures (and more types of figures). We will start this section by using <code class="docutils literal notranslate"><span class="pre">plotly</span> <span class="pre">express</span></code> to make some figures. Then, we will discuss <code class="docutils literal notranslate"><span class="pre">plotly</span> <span class="pre">graph</span> <span class="pre">objects</span></code>.</p>
+<p>Before getting started, make sure you have plotly installed</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">plotly</span>
+</pre></div>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -281,8 +285,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="introduction.html" title="previous page">Preparing to Plot</a>
-    <a class='right-next' id="next-link" href="matplotlib_line_plots.html" title="next page">Line and Scatter Plots</a>
+    <a class='left-prev' id="prev-link" href="project.html" title="previous page">Putting it together</a>
+    <a class='right-next' id="next-link" href="plotly-express.html" title="next page">Plots with Plotly Express</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
