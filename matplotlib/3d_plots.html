@@ -88,19 +88,14 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Scientific Visualization Using Python
+  <a class="reference internal" href="../setup.html">
+   Set Up
   </a>
  </li>
 </ul>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="setup.html">
-   Set Up
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="introduction.html">
+  <a class="reference internal" href="../introduction.html">
    Preparing to Plot
   </a>
  </li>
@@ -110,7 +105,12 @@
   </a>
   <ul class="current collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="matplotlib_line_plots.html">
+    <a class="reference internal" href="matplotlib-procedural.html">
+     Plotting with Matplotlib’s Procedural Interface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="line_plots.html">
      Line and Scatter Plots
     </a>
    </li>
@@ -144,12 +144,12 @@
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="plotly.html">
+  <a class="reference internal" href="../plotly/plotly_intro.html">
    Interactive Plots using Plotly
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="plotly-express.html">
+    <a class="reference internal" href="../plotly/plotly-express.html">
      Plots with Plotly Express
     </a>
    </li>
@@ -197,7 +197,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/chapters/3d_plots.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/matplotlib/3d_plots.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -217,7 +217,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/MolSSI-Education/python-visualization/issues/new?title=Issue%20on%20page%20%2Fchapters/3d_plots.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/MolSSI-Education/python-visualization/issues/new?title=Issue%20on%20page%20%2Fmatplotlib/3d_plots.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -238,7 +238,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/MolSSI-Education/python-visualization/main?urlpath=tree/molssi_python_visualization/chapters/3d_plots.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/MolSSI-Education/python-visualization/main?urlpath=tree/molssi_python_visualization/matplotlib/3d_plots.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -2226,7 +2226,7 @@ if (IPython.notebook.kernel !== null) {
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./chapters"
+            path: "./matplotlib"
         },
         predefinedOutput: true
     }

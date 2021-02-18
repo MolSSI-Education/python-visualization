@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive Plots &#8212; Scientific Visualization Using Python</title>
+    <title>Creating Plots using Matplotlib &#8212; Scientific Visualization Using Python</title>
     
   <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
@@ -55,6 +55,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Plotting with Matplotlib’s Procedural Interface" href="matplotlib-procedural.html" />
+    <link rel="prev" title="Preparing to Plot" href="../introduction.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -86,29 +88,29 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Scientific Visualization Using Python
-  </a>
- </li>
-</ul>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="setup.html">
+  <a class="reference internal" href="../setup.html">
    Set Up
   </a>
  </li>
+</ul>
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="introduction.html">
+  <a class="reference internal" href="../introduction.html">
    Preparing to Plot
   </a>
  </li>
- <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="intro_matplotlib.html">
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="current reference internal" href="#">
    Creating Plots using Matplotlib
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="matplotlib_line_plots.html">
+    <a class="reference internal" href="matplotlib-procedural.html">
+     Plotting with Matplotlib’s Procedural Interface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="line_plots.html">
      Line and Scatter Plots
     </a>
    </li>
@@ -142,12 +144,12 @@
   </i>
  </li>
  <li class="toctree-l1 collapsible-parent">
-  <a class="reference internal" href="plotly.html">
+  <a class="reference internal" href="../plotly/plotly_intro.html">
    Interactive Plots using Plotly
   </a>
   <ul class="collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="plotly-express.html">
+    <a class="reference internal" href="../plotly/plotly-express.html">
      Plots with Plotly Express
     </a>
    </li>
@@ -195,9 +197,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/chapters/interactive.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/matplotlib/intro_matplotlib.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -215,7 +217,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/MolSSI-Education/python-visualization/issues/new?title=Issue%20on%20page%20%2Fchapters/interactive.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/MolSSI-Education/python-visualization/issues/new?title=Issue%20on%20page%20%2Fmatplotlib/intro_matplotlib.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -231,23 +233,6 @@
 
         <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/MolSSI-Education/python-visualization/main?urlpath=tree/molssi_python_visualization/chapters/interactive.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
     </div>
 
     <!-- Table of contents -->
@@ -260,8 +245,12 @@
         
               <div>
                 
-  <div class="section" id="interactive-plots">
-<h1>Interactive Plots<a class="headerlink" href="#interactive-plots" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="creating-plots-using-matplotlib">
+<h1>Creating Plots using Matplotlib<a class="headerlink" href="#creating-plots-using-matplotlib" title="Permalink to this headline">¶</a></h1>
+<p>In this section, we will be creating plots using the python library <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.  Matplotlib is perhaps the most widely used python plotting library.</p>
+<p>You can see the documentation for the Matplotlib library <a class="reference external" href="https://matplotlib.org/stable/index.html">here</a> or read more about its history <a class="reference external" href="https://matplotlib.org/stable/users/history.html">here</a>.</p>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -277,7 +266,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./chapters"
+            path: "./matplotlib"
         },
         predefinedOutput: true
     }
@@ -292,6 +281,8 @@
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="../introduction.html" title="previous page">Preparing to Plot</a>
+    <a class='right-next' id="next-link" href="matplotlib-procedural.html" title="next page">Plotting with Matplotlib’s Procedural Interface</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
