@@ -5,6 +5,7 @@
 - file: introduction
 - file: matplotlib/intro_matplotlib
   sections:
+    - file: matplotlib/matplotlib-procedural
     - file: matplotlib/line_plots
     - file: matplotlib/subplots
     - file: matplotlib/font_size
