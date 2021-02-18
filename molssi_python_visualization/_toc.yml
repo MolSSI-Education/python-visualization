@@ -1,7 +1,7 @@
 # Table of content
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
-- file: setup
+- file: chapters/setup
 - file: introduction
 - file: matplotlib/intro_matplotlib
   sections:
