@@ -1,17 +1,16 @@
 # Table of content
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
-- file: intro.md
-- file: chapters/setup
-- file: chapters/introduction
-- file: chapters/intro_matplotlib
+- file: setup
+- file: introduction
+- file: matplotlib/intro_matplotlib
   sections:
-    - file: chapters/matplotlib_line_plots
-    - file: chapters/subplots
-    - file: chapters/font_size
-    - file: chapters/contour
-    - file: chapters/3d_plots
-    - file: chapters/project
-- file: chapters/plotly
+    - file: matplotlib/line_plots
+    - file: matplotlib/subplots
+    - file: matplotlib/font_size
+    - file: matplotlib/contour
+    - file: matplotlib/3d_plots
+    - file: matplotlib/project
+- file: plotly/plotly_intro
   sections:
-    - file: chapters/plotly-express
+    - file: plotly/plotly-express
