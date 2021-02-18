@@ -8,7 +8,7 @@
     - file: matplotlib/matplotlib-procedural
     - file: matplotlib/line_plots
     - file: matplotlib/subplots
-    - file: matplotlib/font_size
+    - file: matplotlib/plot_defaults
     - file: matplotlib/contour
     - file: matplotlib/3d_plots
     - file: matplotlib/project
