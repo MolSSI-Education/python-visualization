@@ -15,3 +15,4 @@
 - file: plotly/plotly_intro
   sections:
     - file: plotly/plotly-express
+    - file: plotly/plotly-subplots
