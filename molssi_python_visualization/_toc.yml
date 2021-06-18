@@ -1,18 +1,17 @@
-# Table of content
-# Learn more at https://jupyterbook.org/customize/toc.html
-#
-- file: chapters/setup
+format: jb-article
+root: chapters/setup
+sections:
 - file: introduction
 - file: matplotlib/intro_matplotlib
   sections:
-    - file: matplotlib/matplotlib-procedural
-    - file: matplotlib/line_plots
-    - file: matplotlib/subplots
-    - file: matplotlib/plot_defaults
-    - file: matplotlib/contour
-    - file: matplotlib/3d_plots
-    - file: matplotlib/project
+  - file: matplotlib/matplotlib-procedural
+  - file: matplotlib/line_plots
+  - file: matplotlib/subplots
+  - file: matplotlib/plot_defaults
+  - file: matplotlib/contour
+  - file: matplotlib/3d_plots
+  - file: matplotlib/project
 - file: plotly/plotly_intro
   sections:
-    - file: plotly/plotly-express
-    - file: plotly/plotly-subplots
+  - file: plotly/plotly-express
+  - file: plotly/plotly-subplots
