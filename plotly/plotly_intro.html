@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -72,6 +72,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/molssi_main_logo.png" class="logo" alt="logo">
       
       
@@ -81,7 +85,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -255,7 +259,7 @@
         
               <div>
                 
-  <div class="section" id="interactive-plots-using-plotly">
+  <div class="tex2jax_ignore mathjax_ignore section" id="interactive-plots-using-plotly">
 <h1>Interactive Plots using Plotly<a class="headerlink" href="#interactive-plots-using-plotly" title="Permalink to this headline">¶</a></h1>
 <p>You have seen in the previous lessons that we can make <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> plots somewhat interactive in the jupyter notebook by using the <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">notebook</span></code> magic command. Matplotlib has other, more complex ways to make figures interactive that you can read about <a class="reference external" href="https://matplotlib.org/stable/users/interactive.html">here</a>.</p>
 <p>However, there are other python libraries which are designed specifically to create interactive figures. This section covers creating interactive plots using the plotting library <a class="reference external" href="https://plotly.com/python/">plotly</a>. Plotly has a python API, but is also available in several other languages. There are two ways you can use plotly - through <code class="docutils literal notranslate"><span class="pre">plotly</span> <span class="pre">express</span></code> or through <code class="docutils literal notranslate"><span class="pre">plotly</span> <span class="pre">graph</span> <span class="pre">objects</span></code>. <code class="docutils literal notranslate"><span class="pre">Plotly</span> <span class="pre">Express</span></code> is the newer, more-user-friendly interface which has been made to simply commonly made plots. The second option - using <code class="docutils literal notranslate"><span class="pre">plotly</span> <span class="pre">graph</span> <span class="pre">objects</span></code> allows for much more control over your figures (and more types of figures). We will start this section by using <code class="docutils literal notranslate"><span class="pre">plotly</span> <span class="pre">express</span></code> to make some figures. Then, we will discuss <code class="docutils literal notranslate"><span class="pre">plotly</span> <span class="pre">graph</span> <span class="pre">objects</span></code>.</p>
@@ -290,16 +294,36 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../matplotlib/project.html" title="previous page">Putting it together</a>
-    <a class='right-next' id="next-link" href="plotly-express.html" title="next page">Plots with Plotly Express</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../matplotlib/project.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Putting it together</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="plotly-express.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Plots with Plotly Express</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

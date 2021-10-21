@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -71,6 +71,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/molssi_main_logo.png" class="logo" alt="logo">
       
       
@@ -80,7 +84,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1 current">
@@ -266,7 +270,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#installing-python-through-anaconda">
@@ -276,6 +280,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#obtain-lesson-materials">
    Obtain lesson materials
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-py3dmol">
+   Install py3dmol
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -294,7 +303,7 @@
         
               <div>
                 
-  <div class="section" id="set-up">
+  <div class="tex2jax_ignore mathjax_ignore section" id="set-up">
 <h1>Set Up<a class="headerlink" href="#set-up" title="Permalink to this headline">¶</a></h1>
 <p>This workshop covers data visualization using the Python programming language. Before proceeding, you should be familar with python syntax like setting variables, logic statements, and for loops, and using a Jupyter notebook. It is also beneficial for you to have experience with NumPy arrays.</p>
 <p>If you don’t have this experience, we recommend first checkout out the first four lessons <a class="reference external" href="https://education.molssi.org/python_scripting_cms/">MolSSI’s Intro Python Workshop</a>. You can see recordings from a webinar series which covered this material <a class="reference external" href="http://education.molssi.org/events/2020/06/02/june-python-webinar.html">here</a>.</p>
@@ -316,9 +325,15 @@
 <li><p>Unzip the file.</p></li>
 </ol>
 </div>
+<div class="section" id="install-py3dmol">
+<h2>Install py3dmol<a class="headerlink" href="#install-py3dmol" title="Permalink to this headline">¶</a></h2>
+<p>From Finder or Spotlight (Mac OS) or the Start Menu (Windows) find the Anaconda Navigator.  The icon looks like a green circle. For this workshop, you will need to install a Python package that does not come by default with Anaconda. From your Anaconda Navigator window, click the button on the left side which says “Environments” (<code class="docutils literal notranslate"><span class="pre">1</span></code> in the image below).</p>
+<p><img alt="package-install" src="../_images/anaconda_navigator_package_install.png" /></p>
+<p>Next, make sure the drop-down menu labeled with <code class="docutils literal notranslate"><span class="pre">2</span></code> is set to <code class="docutils literal notranslate"><span class="pre">All</span></code>. Click the button labeled in <code class="docutils literal notranslate"><span class="pre">3</span></code> and wait for this check to complete. Then, type <code class="docutils literal notranslate"><span class="pre">py3dmol</span></code> into the search bar labeled in <code class="docutils literal notranslate"><span class="pre">4</span></code>. Select the checkbox next to the result in <code class="docutils literal notranslate"><span class="pre">5</span></code>. Then, click the <code class="docutils literal notranslate"><span class="pre">Apply</span></code> button labeled in <code class="docutils literal notranslate"><span class="pre">6</span></code> to download and install the package <a class="reference external" href="https://3dmol.csb.pitt.edu/">py3Dmol</a>. This package is a molecular visualizer that can be used in browsers and Jupyter notebooks.</p>
+</div>
 <div class="section" id="start-a-jupyter-notebook">
 <h2>Start a Jupyter notebook<a class="headerlink" href="#start-a-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
-<p>From Finder or Spotlight (Mac OS) or the Start Menu (Windows) find the Anaconda Navigator.  The icon looks like a green circle.  Click Launch under Jupyter Notebook.  It may take a few seconds to load the page, especially if it is the first time you have ever used the jupyter notebook, so don’t panic if nothing loads for a few seconds.  Then a new window should open in your default internet browser. Use the file navigation window to navigate to <code class="docutils literal notranslate"><span class="pre">Desktop</span></code> and then to the <code class="docutils literal notranslate"><span class="pre">python-visualization</span></code> folder.  In the upper right hand corner, click New, then choose Python 3 from the dropdown list (shown below)</p>
+<p>Click the “Home” button on the left side of the Anaconda Navigator window (above “Environments, labeled by <code class="docutils literal notranslate"><span class="pre">1</span></code> in the image above). Click Launch under Jupyter Notebook.  It may take a few seconds to load the page, especially if it is the first time you have ever used the jupyter notebook, so don’t panic if nothing loads for a few seconds.  Then a new window should open in your default internet browser. Use the file navigation window to navigate to <code class="docutils literal notranslate"><span class="pre">Desktop</span></code> and then to the <code class="docutils literal notranslate"><span class="pre">python-visualization</span></code> folder.  In the upper right hand corner, click New, then choose Python 3 from the dropdown list (shown below)</p>
 <img src="https://github.com/MolSSI-Education/python_scripting_cms/blob/gh-pages/fig/setup_fig1.png?raw=true" width="70%">
 <p>This will start a new Jupyter notebook using Python 3. You’re ready to go!</p>
 </div>
@@ -349,15 +364,27 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='right-next' id="next-link" href="../introduction.html" title="next page">Preparing to Plot</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+     <div id="next">
+        <a class="right-next" href="../introduction.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Preparing to Plot</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
