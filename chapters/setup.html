@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Set Up &#8212; Scientific Visualization Using Python</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -31,17 +31,20 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -54,8 +57,21 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Preparing to Plot" href="../introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
     
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-169902961-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -219,7 +235,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -270,7 +286,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -288,8 +304,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-py3dmol">
-   Install py3dmol
+  <a class="reference internal nav-link" href="#install-nglview">
+   Install nglview
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -305,13 +321,51 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Set Up</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-python-through-anaconda">
+   Installing Python through Anaconda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#obtain-lesson-materials">
+   Obtain lesson materials
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-nglview">
+   Install nglview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#start-a-jupyter-notebook">
+   Start a Jupyter notebook
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="set-up">
 <h1>Set Up<a class="headerlink" href="#set-up" title="Permalink to this headline">¶</a></h1>
 <p>This workshop covers data visualization using the Python programming language. Before proceeding, you should be familar with python syntax like setting variables, logic statements, and for loops, and using a Jupyter notebook. It is also beneficial for you to have experience with NumPy arrays.</p>
-<p>If you don’t have this experience, we recommend first checkout out the first four lessons <a class="reference external" href="https://education.molssi.org/python_scripting_cms/">MolSSI’s Intro Python Workshop</a>. You can see recordings from a webinar series which covered this material <a class="reference external" href="http://education.molssi.org/events/2020/06/02/june-python-webinar.html">here</a>.</p>
+<p>If you don’t have this experience, we recommend first checkout out the first four lessons <a class="reference external" href="https://education.molssi.org/python_scripting_cms/">MolSSI’s Intro Python Workshop</a>. You can see recordings from a webinar series which covered this material <a class="reference external" href="https://www.youtube.com/playlist?list=PLOTjazgLxvK1LLl_wtgUc3vATyyaopUxY">here</a>.</p>
 <div class="section" id="installing-python-through-anaconda">
 <h2>Installing Python through Anaconda<a class="headerlink" href="#installing-python-through-anaconda" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://python.org/">Python</a> is a popular language for scientific computing, and great for general-purpose programming as well. Installing all of its scientific packages individually can be a bit difficult, however, so we recommend the all-in-one installer Anaconda.</p>
@@ -330,11 +384,29 @@
 <li><p>Unzip the file.</p></li>
 </ol>
 </div>
-<div class="section" id="install-py3dmol">
-<h2>Install py3dmol<a class="headerlink" href="#install-py3dmol" title="Permalink to this headline">¶</a></h2>
-<p>From Finder or Spotlight (Mac OS) or the Start Menu (Windows) find the Anaconda Navigator.  The icon looks like a green circle. For this workshop, you will need to install a Python package that does not come by default with Anaconda. From your Anaconda Navigator window, click the button on the left side which says “Environments” (<code class="docutils literal notranslate"><span class="pre">1</span></code> in the image below).</p>
+<div class="section" id="install-nglview">
+<h2>Install nglview<a class="headerlink" href="#install-nglview" title="Permalink to this headline">¶</a></h2>
+<p>This workshop covers created molecular visualizations using the Python package <a class="reference external" href="http://nglviewer.org/nglview/latest/">nglview</a>. This package does not come with Anaconda, so we have to install it. The next section describes how to install the package nglview using the Anaconda Navigator.</p>
+<p>From Finder or Spotlight (Mac OS) or the Start Menu (Windows) find the Anaconda Navigator.  The icon looks like a green circle. From your Anaconda Navigator window, click the button on the left side which says “Environments”.</p>
+<p>Once you are in your environments tab, you will need to add a new “channel”. Channels are places Anaconda will look for packages which it wants to install.</p>
+<p><img alt="add-channel" src="../_images/anaconda-add-channel-diagram.png" /></p>
+<p>Follow this procedure to add a channel to Anaconda. The numbers below correspond to where you should click in the image above.</p>
+<ol class="simple">
+<li><p>Click the “channels” button.</p></li>
+<li><p>Type “conda-forge” in the text box that appears.</p></li>
+<li><p>Press Enter on your keyboard</p></li>
+<li><p>Click the “Update Channels” button when it turns green.</p></li>
+</ol>
+<p>Next, you must install the package NGLView. Follow the procedure given below to install the package.</p>
 <p><img alt="package-install" src="../_images/anaconda_navigator_package_install.png" /></p>
-<p>Next, make sure the drop-down menu labeled with <code class="docutils literal notranslate"><span class="pre">2</span></code> is set to <code class="docutils literal notranslate"><span class="pre">All</span></code>. Click the button labeled in <code class="docutils literal notranslate"><span class="pre">3</span></code> and wait for this check to complete. Then, type <code class="docutils literal notranslate"><span class="pre">py3dmol</span></code> into the search bar labeled in <code class="docutils literal notranslate"><span class="pre">4</span></code>. Select the checkbox next to the result in <code class="docutils literal notranslate"><span class="pre">5</span></code>. Then, click the <code class="docutils literal notranslate"><span class="pre">Apply</span></code> button labeled in <code class="docutils literal notranslate"><span class="pre">6</span></code> to download and install the package <a class="reference external" href="https://3dmol.csb.pitt.edu/">py3Dmol</a>. This package is a molecular visualizer that can be used in browsers and Jupyter notebooks.</p>
+<ol class="simple">
+<li><p>Make sure you are still in your Environments tab.</p></li>
+<li><p>Set the drop-down menu labeled with <code class="docutils literal notranslate"><span class="pre">2</span></code> to <code class="docutils literal notranslate"><span class="pre">All</span></code>.</p></li>
+<li><p>Click the button labeled in <code class="docutils literal notranslate"><span class="pre">3</span></code> and wait for this check to complete.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">nglview</span></code> into the search bar labeled in <code class="docutils literal notranslate"><span class="pre">4</span></code>.</p></li>
+<li><p>Select the checkbox next to the result in <code class="docutils literal notranslate"><span class="pre">5</span></code>.</p></li>
+<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Apply</span></code> button labeled in <code class="docutils literal notranslate"><span class="pre">6</span></code> to download and install the package [nglview]. This package is a molecular visualizer that can be used in browsers and Jupyter notebooks.</p></li>
+</ol>
 </div>
 <div class="section" id="start-a-jupyter-notebook">
 <h2>Start a Jupyter notebook<a class="headerlink" href="#start-a-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
@@ -368,55 +440,35 @@
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-     <div id="next">
-        <a class="right-next" href="../introduction.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Preparing to Plot</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='right-next' id="next-link" href="../introduction.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Preparing to Plot</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Jessica A. Nash<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Jessica A. Nash<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
-
-  
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-169902961-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>
